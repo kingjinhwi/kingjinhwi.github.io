@@ -65,17 +65,17 @@ for i in range(count):
 print(total)
 ```
 
-    4
-    1
-    3
-    3
+    5
+    5
     5
     3
     6
+    2
+    5
     4
-    5
-    5
-    39
+    1
+    4
+    40
     
 
 #### [심화2] 주사위 2개를 한꺼번에 던져서 나온 두 숫자의 합을 구하고, 이를 여러번 시행했을때의 평균값을 구해라
@@ -93,9 +93,9 @@ print(dice)
 print(sum(dice)/count)
 ```
 
-    40
-    [6, 4, 5, 5, 10, 6, 10, 8, 7, 7, 5, 8, 7, 6, 8, 9, 4, 10, 10, 6, 6, 2, 10, 3, 5, 5, 8, 5, 8, 2, 9, 11, 6, 10, 5, 8, 10, 7, 5, 5]
-    6.775
+    5
+    [8, 10, 7, 4, 8]
+    7.4
     
 
 #### ※ 함수만들기
@@ -420,24 +420,15 @@ tip_top10
 
 ```python
 import matplotlib.pyplot as plt
-plt.bar(tip_top10.index, tip_top['total_bill'])
-plt.title('HI', fontsize=30)
-# plt.savefig('test.png') # 그림 저장
+plt.bar(tip_top10.index, tip_top10['total_bill'])
+plt.title('top10', fontsize=30)
+plt.savefig('test.png') # 그림 저장
 ```
 
 
-    ------------------------------------------------------
-
-    NameError            Traceback (most recent call last)
-
-    <ipython-input-15-a9b13b3a2444> in <module>
-          1 import matplotlib.pyplot as plt
-    ----> 2 plt.bar(tip_top10.index, tip_top['total_bill'])
-          3 plt.title('HI', fontsize=30)
-          4 # plt.savefig('test.png') # 그림 저장
     
-
-    NameError: name 'tip_top' is not defined
+![png](output_21_0.png)
+    
 
 
 
@@ -872,19 +863,12 @@ import matplotlib.pyplot as plt
 
 plt.bar(tmp['rank'],tmp['admit'])
 
-# plt.savefig('test.png')
+plt.savefig('test.png')
 ```
 
 
-
-
-    <BarContainer object of 4 artists>
-
-
-
-
     
-![png](output_29_1.png)
+![png](output_29_0.png)
     
 
 
@@ -898,8 +882,15 @@ plt.bar(tmp['rank'],tmp['admit'])
 ```
 
 
+
+
+    <BarContainer object of 4 artists>
+
+
+
+
     
-![png](output_30_0.png)
+![png](output_30_1.png)
     
 
 
@@ -915,8 +906,15 @@ plt.barh(tmp['rank'],tmp['admit'])
 ```
 
 
+
+
+    <BarContainer object of 4 artists>
+
+
+
+
     
-![png](output_32_0.png)
+![png](output_32_1.png)
     
 
 
@@ -1135,7 +1133,6 @@ orders.head()
       <th>amount</th>
       <th>year</th>
       <th>month</th>
-      <th>day</th>
       <th>weekday</th>
     </tr>
   </thead>
@@ -1149,7 +1146,6 @@ orders.head()
       <td>2019</td>
       <td>1</td>
       <td>2</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1159,7 +1155,6 @@ orders.head()
       <td>1700</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>2</td>
     </tr>
     <tr>
@@ -1171,7 +1166,6 @@ orders.head()
       <td>2019</td>
       <td>1</td>
       <td>2</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1182,7 +1176,6 @@ orders.head()
       <td>2019</td>
       <td>1</td>
       <td>2</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1192,7 +1185,6 @@ orders.head()
       <td>8800</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -1236,7 +1228,6 @@ orders.head(10)
       <th>amount</th>
       <th>year</th>
       <th>month</th>
-      <th>day</th>
       <th>weekday</th>
     </tr>
   </thead>
@@ -1249,7 +1240,6 @@ orders.head(10)
       <td>7900</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1260,7 +1250,6 @@ orders.head(10)
       <td>1700</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1271,7 +1260,6 @@ orders.head(10)
       <td>1000</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1282,7 +1270,6 @@ orders.head(10)
       <td>1300</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1293,7 +1280,6 @@ orders.head(10)
       <td>8800</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1304,7 +1290,6 @@ orders.head(10)
       <td>2700</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1315,7 +1300,6 @@ orders.head(10)
       <td>1000</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1326,7 +1310,6 @@ orders.head(10)
       <td>8800</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1337,7 +1320,6 @@ orders.head(10)
       <td>8800</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
     <tr>
@@ -1348,7 +1330,6 @@ orders.head(10)
       <td>8200</td>
       <td>2019</td>
       <td>1</td>
-      <td>2</td>
       <td>wed</td>
     </tr>
   </tbody>
@@ -1597,3 +1578,13 @@ plt.show()
 ![png](output_47_0.png)
     
 
+
+
+```python
+
+```
+
+
+```python
+
+```
